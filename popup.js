@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var goButton = document.getElementById('goButton');
-    var urlInput = document.getElementById('urlInput');
+    var goButton = document.getElementById('searchButton');
+    var urlInput = document.getElementById('queryInput');
 
     function openOrderSearch() {
         var inputQuery = urlInput.value.trim();
@@ -23,4 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
             openOrderSearch();
         }
     });
+
+    // Set focus on the input field when the popup is opened
+    urlInput.focus();
 });

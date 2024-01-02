@@ -12,7 +12,7 @@ Chrome & Firefox extension to search orders on FluentCommerce
 4. Enable `Developer mode`
 5. Click on `Load unpacked extension...`
 6. Select the folder you unzipped the file
-7. Press Ctrl+Shift+Y
+7. Press Ctrl+Shift+U (Cmd + Shift + U on Mac)
 8. Copy-Paste your Order Ref
 9. Press Enter
 10. Enjoy!
@@ -25,7 +25,7 @@ Chrome & Firefox extension to search orders on FluentCommerce
 4. Click on the gear icon
 5. Click on `Install Add-on From File...`
 6. Select the XPI file you downloaded
-7. Press Ctrl+Shift+Y
+7. Press Ctrl+Shift+U (Cmd + Shift + U on Mac)
 8. Copy-Paste your Order Ref
 9. Press Enter
 10. Enjoy!

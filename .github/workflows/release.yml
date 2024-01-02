@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Git Semantic Version
         id: semantic_version
@@ -19,15 +21,10 @@ jobs:
         with:
           # The prefix to use to identify tags
           tag_prefix: "v"
-          # A string which, if present in a git commit, indicates that a change represents a
-          # major (breaking) change, supports regular expressions wrapped with '/'
-          major_pattern: "(MAJOR)"
-          # Same as above except indicating a minor change, supports regular expressions wrapped with '/'
-          minor_pattern: "(MINOR)"
           # If this is set to true, *every* commit will be treated as a new version.
           bump_each_commit: true
           # If enabled, diagnostic information will be added to the action output.
-          debug: false
+          debug: true
 
       - name: Create release
         id: create_release

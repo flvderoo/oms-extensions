@@ -27,9 +27,9 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            build/OMSExtensions.zip
-            build/OMSExtensions.xpi
+            build/OMSExtensions_chrome.zip
+            build/OMSExtensions_firefox.xpi
           tag_name: ${{ steps.semantic_version.outputs.version_tag }}
-          release_name: Release ${{ steps.semantic_version.outputs.version_tag }}
+          name: Release ${{ steps.semantic_version.outputs.version_tag }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

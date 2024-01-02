@@ -17,8 +17,6 @@ jobs:
         id: semantic_version
         uses: PaulHatch/semantic-version@v5.3.0
         with:
-          # The prefix to use to identify tags
-          tag_prefix: "v"
           # If this is set to true, *every* commit will be treated as a new version.
           bump_each_commit: true
 

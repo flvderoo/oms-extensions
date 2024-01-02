@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "OMS Extensions",
+  "version": "1.0",
+  "description": "Open Fluent Orders at a glance",
+  "icons": {
+    "32": "fluent.png"
+  },
+  "action": {
+    "default_icon": {
+      "32": "fluent.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      }
+    }
+  },
+  "permissions": ["tabs"]
+}

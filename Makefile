@@ -9,18 +9,27 @@ FILES = manifest.json popup.html popup.js popup.css fluent.png
 # Output directory for the XPI file
 OUTPUT_DIR = build
 
-# Final XPI file name (Firefox Extension
-XPI_FILE = $(OUTPUT_DIR)/$(EXTENSION_NAME)_firefox.xpi
 # Final zip file name (Chrome Extension)
 ZIP_FILE = $(OUTPUT_DIR)/$(EXTENSION_NAME)_chrome.zip
 
-all: $(XPI_FILE)
+all: clean build
 
-$(XPI_FILE): $(FILES)
+build: build-dir chrome firefox
+
+build-dir:
+	@echo "Creating build directory for chrome extension"
 	mkdir -p $(OUTPUT_DIR)
+
+chrome:
+	@echo "Packing chrome extension"
 	zip -r $(ZIP_FILE) $(FILES)
 
+firefox:
+	@echo "Moving firefox extension"
+	mv web-ext-artifacts/*.xpi $(OUTPUT_DIR)/$(EXTENSION_NAME)_firefox.xpi
+
 clean:
+	@echo "Cleaning up"
 	rm -rf $(OUTPUT_DIR)
 
 .PHONY: all clean

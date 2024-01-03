@@ -1,5 +1,12 @@
 {
   "manifest_version": 3,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{6b126512-5461-4001-ab03-37964a9c3a81}",
+      "strict_min_version": "42.0"
+    }
+  },
+
   "name": "OMS Extensions",
   "version": "1.0",
   "description": "Open Fluent Orders at a glance",

@@ -18,7 +18,6 @@ all: $(XPI_FILE)
 
 $(XPI_FILE): $(FILES)
 	mkdir -p $(OUTPUT_DIR)
-	zip -r $(XPI_FILE) $(FILES)
 	zip -r $(ZIP_FILE) $(FILES)
 
 clean:

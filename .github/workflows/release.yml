@@ -31,8 +31,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            build/OMSExtensions_chrome.zip
-            web-ext-artifacts/*.xpi
+            build/*
           tag_name: ${{ steps.semantic_version.outputs.version_tag }}
           name: Release ${{ steps.semantic_version.outputs.version_tag }}
         env:

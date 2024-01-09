@@ -26,6 +26,7 @@ chrome:
 
 firefox:
 	@echo "Moving firefox extension"
+	web-ext sign --api-key=$(MOZILLA_USER) --api-secret=$(MOZILLA_PW)
 	mv web-ext-artifacts/*.xpi $(OUTPUT_DIR)/$(EXTENSION_NAME)_firefox.xpi
 
 clean:

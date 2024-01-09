@@ -6,8 +6,21 @@ document.addEventListener('DOMContentLoaded', function () {
         var inputQuery = urlInput.value.trim();
 
         if (inputQuery !== '') {
-            // Construct the Fluent Order URL
-            var fluentOrderURL = 'https://emmasleep.apps.fluentcommerce.com/oms/#/orders?orders_ref=%25' + encodeURIComponent(inputQuery) + '%25';
+            // Split input by spaces
+            var inputParts = inputQuery.split(" ");
+
+            // Create multi-input URL
+            var fluentOrderURL = 'https://emmasleep.apps.fluentcommerce.com/oms/#/orders?';
+
+            // Add orders_ref parameters for each part
+            for (var i = 0; i < inputParts.length; i++) {
+                fluentOrderURL += 'orders_ref[]=%25' + encodeURIComponent(inputParts[i]) + '%25';
+
+                // Add '&' between parameters, except for the last one
+                if (i < inputParts.length - 1) {
+                    fluentOrderURL += '&';
+                }
+            }
 
             // Open a new tab with the constructed order URL
             chrome.tabs.create({
